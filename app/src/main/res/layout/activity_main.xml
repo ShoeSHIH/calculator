@@ -8,18 +8,8 @@
     android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView"
+    <ImageButton
+        android:id="@+id/equals"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:adjustViewBounds="false"
@@ -86,30 +76,31 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.5" />
 
-    <ImageView
-        android:id="@+id/imageView2"
+    <ImageButton
+        android:id="@+id/plus"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:alpha="50"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView15"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton3"
         app:layout_constraintEnd_toEndOf="@+id/barrier"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="@+id/imageView15"
+        app:layout_constraintTop_toTopOf="@+id/imageButton3"
         app:srcCompat="@drawable/calculator_plus" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvResult"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="#80FFFFFF"
-        android:gravity="bottom"
+        android:gravity="bottom|right"
         android:padding="0dp"
         android:paddingTop="0dp"
         android:paddingRight="4dp"
         android:paddingBottom="0dp"
-        android:text="3.14152"
+
+        android:inputType="number"
         android:textColor="#80FFFFFF"
-        android:textDirection="rtl"
+        android:textDirection="firstStrongRtl"
         android:textSize="70sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toEndOf="@+id/barrier"
@@ -131,21 +122,24 @@
         app:layout_constraintGuide_percent="0.3529412" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/tvControl"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
         android:background="#80FFFFFF"
         android:ems="10"
+        android:gravity="bottom"
         android:inputType="number"
         android:singleLine="false"
-        android:text="3+0.141526"
-        android:textDirection="rtl"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="@+id/barrier"
-        app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView3"
+        android:textDirection="rtl"
+        app:layout_constraintBottom_toTopOf="@+id/tvResult"
+        app:layout_constraintEnd_toEndOf="@+id/barrier"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/divide"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:alpha="50"
@@ -155,8 +149,8 @@
         app:layout_constraintTop_toTopOf="@+id/guideline4"
         app:srcCompat="@drawable/calculator_divide" />
 
-    <ImageView
-        android:id="@+id/imageView4"
+    <ImageButton
+        android:id="@+id/percent"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:alpha="50"
@@ -166,8 +160,8 @@
         app:layout_constraintTop_toTopOf="@+id/guideline4"
         app:srcCompat="@drawable/calculator_percent" />
 
-    <ImageView
-        android:id="@+id/imageView5"
+    <ImageButton
+        android:id="@+id/changesign"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:alpha="50"
@@ -177,8 +171,8 @@
         app:layout_constraintTop_toTopOf="@+id/guideline4"
         app:srcCompat="@drawable/calculator_changesign" />
 
-    <ImageView
-        android:id="@+id/imageView6"
+    <ImageButton
+        android:id="@+id/reset"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:alpha="50"
@@ -188,90 +182,90 @@
         app:layout_constraintTop_toTopOf="@+id/guideline4"
         app:srcCompat="@drawable/calculator_reset" />
 
-    <ImageView
-        android:id="@+id/imageView7"
+    <ImageButton
+        android:id="@+id/times"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:alpha="50"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/divide"
+        app:layout_constraintStart_toEndOf="@+id/percent"
+        app:layout_constraintTop_toBottomOf="@+id/divide"
         app:srcCompat="@drawable/calculator_times" />
 
-    <ImageView
-        android:id="@+id/imageView8"
+    <ImageButton
+        android:id="@+id/minus"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:alpha="50"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toEndOf="@+id/barrier"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        app:layout_constraintTop_toBottomOf="@+id/equals"
         app:srcCompat="@drawable/calculator_minus" />
 
-    <ImageView
-        android:id="@+id/imageView9"
+    <ImageButton
+        android:id="@+id/imageButton9"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView8"
-        app:layout_constraintEnd_toStartOf="@+id/imageView7"
+        app:layout_constraintBottom_toTopOf="@+id/minus"
+        app:layout_constraintEnd_toStartOf="@+id/times"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/percent"
         app:srcCompat="@drawable/calculator_9" />
 
-    <ImageView
-        android:id="@+id/imageView10"
+    <ImageButton
+        android:id="@+id/imageButton7"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton9"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:layout_constraintTop_toBottomOf="@+id/reset"
         app:srcCompat="@drawable/calculator_7" />
 
-    <ImageView
-        android:id="@+id/imageView11"
+    <ImageButton
+        android:id="@+id/imageButton8"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView9"
-        app:layout_constraintEnd_toStartOf="@+id/imageView9"
-        app:layout_constraintStart_toEndOf="@+id/imageView10"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton9"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton9"
+        app:layout_constraintStart_toEndOf="@+id/imageButton7"
+        app:layout_constraintTop_toBottomOf="@+id/changesign"
         app:srcCompat="@drawable/calculator_8" />
 
-    <ImageView
-        android:id="@+id/imageView12"
+    <ImageButton
+        android:id="@+id/imageButton6"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView8"
-        app:layout_constraintEnd_toStartOf="@+id/imageView8"
+        app:layout_constraintBottom_toBottomOf="@+id/minus"
+        app:layout_constraintEnd_toStartOf="@+id/minus"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton9"
         app:srcCompat="@drawable/calculator_6" />
 
-    <ImageView
-        android:id="@+id/imageView13"
+    <ImageButton
+        android:id="@+id/imageButton5"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
-        app:layout_constraintEnd_toStartOf="@+id/imageView12"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton6"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView11"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton8"
         app:srcCompat="@drawable/calculator_5" />
 
-    <ImageView
-        android:id="@+id/imageView14"
+    <ImageButton
+        android:id="@+id/imageButton4"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView13"
-        app:layout_constraintEnd_toStartOf="@+id/imageView13"
-        app:layout_constraintStart_toStartOf="@+id/imageView10"
-        app:layout_constraintTop_toBottomOf="@+id/imageView10"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton5"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton5"
+        app:layout_constraintStart_toStartOf="@+id/imageButton7"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton7"
         app:srcCompat="@drawable/calculator_4" />
 
-    <ImageView
-        android:id="@+id/imageView15"
+    <ImageButton
+        android:id="@+id/imageButton3"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
@@ -280,44 +274,61 @@
         app:layout_constraintTop_toTopOf="@+id/guideline5"
         app:srcCompat="@drawable/calculator_3" />
 
-    <ImageView
-        android:id="@+id/imageView16"
+    <ImageButton
+        android:id="@+id/imageButton2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
-        app:layout_constraintEnd_toStartOf="@+id/imageView15"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton3"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView13"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton5"
         app:srcCompat="@drawable/calculator_2" />
 
-    <ImageView
-        android:id="@+id/imageView17"
+    <ImageButton
+        android:id="@+id/imageButton1"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
-        app:layout_constraintEnd_toStartOf="@+id/imageView16"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView14"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton4"
         app:srcCompat="@drawable/calculator_1" />
 
-    <ImageView
-        android:id="@+id/imageView18"
+    <ImageButton
+        android:id="@+id/imageButton0"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView17"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton1"
         app:srcCompat="@drawable/calculator_0" />
 
-    <ImageView
-        android:id="@+id/imageView19"
+    <ImageButton
+        android:id="@+id/point"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView18"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton0"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView16"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
         app:srcCompat="@drawable/calculator_point" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="265dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/calculator_8"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="343dp" />
 
 </android.support.constraint.ConstraintLayout>
