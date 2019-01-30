@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private double val1 = Double.NaN;
     private  double val2;
     private char ACTION;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

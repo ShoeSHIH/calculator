@@ -10,10 +10,12 @@
 
     <ImageButton
         android:id="@+id/equals"
+        style="@android:style/Widget.Holo.ImageButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:adjustViewBounds="false"
         android:alpha="50"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toEndOf="@+id/barrier"
         app:layout_constraintHorizontal_bias="0.427"
@@ -78,13 +80,15 @@
 
     <ImageButton
         android:id="@+id/plus"
+        style="@android:style/Widget.Holo.ImageButton"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:alpha="50"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="@+id/imageButton3"
         app:layout_constraintEnd_toEndOf="@+id/barrier"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="@+id/imageButton3"
+        app:layout_constraintTop_toTopOf="@+id/guideline5"
         app:srcCompat="@drawable/calculator_plus" />
 
     <TextView
@@ -140,9 +144,11 @@
 
     <ImageButton
         android:id="@+id/divide"
+        style="@android:style/Widget.Holo.ImageButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:alpha="50"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
         app:layout_constraintEnd_toEndOf="@+id/barrier"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
@@ -151,9 +157,11 @@
 
     <ImageButton
         android:id="@+id/percent"
+        style="@android:style/Widget.Holo.ImageButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:alpha="50"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/guideline"
@@ -162,9 +170,11 @@
 
     <ImageButton
         android:id="@+id/changesign"
+        style="@android:style/Widget.Holo.ImageButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:alpha="50"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
@@ -173,9 +183,11 @@
 
     <ImageButton
         android:id="@+id/reset"
+        style="@android:style/Widget.Holo.ImageButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:alpha="50"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
@@ -184,9 +196,11 @@
 
     <ImageButton
         android:id="@+id/times"
+        style="@android:style/Widget.Holo.ImageButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:alpha="50"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toEndOf="@+id/divide"
         app:layout_constraintStart_toEndOf="@+id/percent"
@@ -194,21 +208,12 @@
         app:srcCompat="@drawable/calculator_times" />
 
     <ImageButton
-        android:id="@+id/minus"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:alpha="50"
-        app:layout_constraintBottom_toTopOf="@+id/guideline5"
-        app:layout_constraintEnd_toEndOf="@+id/barrier"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/equals"
-        app:srcCompat="@drawable/calculator_minus" />
-
-    <ImageButton
         android:id="@+id/imageButton9"
+        style="@android:style/Widget.Holo.ImageButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/minus"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toStartOf="@+id/times"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/percent"
@@ -216,8 +221,10 @@
 
     <ImageButton
         android:id="@+id/imageButton7"
+        style="@android:style/Widget.Holo.ImageButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="@+id/imageButton9"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
@@ -226,8 +233,10 @@
 
     <ImageButton
         android:id="@+id/imageButton8"
+        style="@android:style/Widget.Holo.ImageButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="@+id/imageButton9"
         app:layout_constraintEnd_toStartOf="@+id/imageButton9"
         app:layout_constraintStart_toEndOf="@+id/imageButton7"
@@ -236,18 +245,22 @@
 
     <ImageButton
         android:id="@+id/imageButton6"
+        style="@android:style/Widget.Holo.ImageButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/minus"
-        app:layout_constraintEnd_toStartOf="@+id/minus"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton3"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton9"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/imageButton9"
         app:srcCompat="@drawable/calculator_6" />
 
     <ImageButton
         android:id="@+id/imageButton5"
+        style="@android:style/Widget.Holo.ImageButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toStartOf="@+id/imageButton6"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
@@ -256,8 +269,10 @@
 
     <ImageButton
         android:id="@+id/imageButton4"
+        style="@android:style/Widget.Holo.ImageButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="@+id/imageButton5"
         app:layout_constraintEnd_toStartOf="@+id/imageButton5"
         app:layout_constraintStart_toStartOf="@+id/imageButton7"
@@ -266,8 +281,10 @@
 
     <ImageButton
         android:id="@+id/imageButton3"
+        style="@android:style/Widget.Holo.ImageButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/guideline"
@@ -276,8 +293,10 @@
 
     <ImageButton
         android:id="@+id/imageButton2"
+        style="@android:style/Widget.Holo.ImageButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintEnd_toStartOf="@+id/imageButton3"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
@@ -286,8 +305,10 @@
 
     <ImageButton
         android:id="@+id/imageButton1"
+        style="@android:style/Widget.Holo.ImageButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
         app:layout_constraintEnd_toStartOf="@+id/imageButton2"
         app:layout_constraintStart_toStartOf="parent"
@@ -296,8 +317,10 @@
 
     <ImageButton
         android:id="@+id/imageButton0"
+        style="@android:style/Widget.Holo.ImageButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
@@ -306,29 +329,25 @@
 
     <ImageButton
         android:id="@+id/point"
+        style="@android:style/Widget.Holo.ImageButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="@+id/imageButton0"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/imageButton2"
         app:srcCompat="@drawable/calculator_point" />
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="265dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/calculator_8"
-        tools:layout_editor_absoluteX="132dp"
-        tools:layout_editor_absoluteY="343dp" />
+    <ImageView
+        android:id="@+id/minus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton3"
+        app:layout_constraintEnd_toEndOf="@+id/barrier"
+        app:layout_constraintStart_toEndOf="@+id/imageButton6"
+        app:layout_constraintTop_toBottomOf="@+id/times"
+        app:srcCompat="@drawable/calculator_minus" />
 
 </android.support.constraint.ConstraintLayout>
